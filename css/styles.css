@@ -1,0 +1,9 @@
+    /* On smaller resolutions, hide desktop-only sections */
+    @media only screen and (max-width: 770px) {
+        .desktop {display: none;}
+    }
+
+    /* On larger resolutions, hide mobile-only sections */
+    @media only screen and (min-width: 770px) {
+        .mobile {display: none;}
+    }
