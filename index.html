@@ -248,7 +248,36 @@
 
         <section class="tm-section-6" id="tm-section-6">
             <div class="tm-address-box">
-                <h2 class="mb-4">Contact Us</h2>
+				<hr class="my-4">	
+				<figure>
+					<div class="fixed-wrap">
+					<div id="fixed">
+					</div>
+					</div>
+				</figure>
+                <h2 class="mb-4"><center>Contact Us</center></h2>
+				<hr class="my-4">	
+				<figure>
+					<div class="fixed-wrap">
+					<div id="fixed">
+					</div>
+					</div>
+				</figure>
+				<div class="contact-form">
+				<form id="contact-form" method="post" action"">
+					<label for="names">Name</label>
+					<input name="fullname" type="text" class="form-control" placeholder="Your Name.." required>
+					<br>
+					<label for="email">Email</label>
+					<input name="lastname" type="email" class="form-control" placeholder="Your email.." 
+					required><br>
+
+						<textarea name="message" class="form-control" placeholder="Message.." row="4"
+						required></textarea><br>
+
+						<input type="submit" class="form-control submit" value="SEND MESSAGE">
+				  </form>
+				</div>
                 <h4 class="mb-5">We can be reached by phone or email. Please don't hesitate to ask any questions you have.<h4>
                 <h5>phone: 586-486-5037</h5>
                 <h5> or email <a href="mailto:starpharmacymi@gmail.com">starpharmacymi@gmail.com</a></h5>
@@ -259,10 +288,11 @@
                     ​24831 Ryan Rd, 
                     <br> Warren, MI 48091
                 </address>
+				<div id="map"></div>
             </div>
-                
+  		
             <footer class="mt-5">
-                <p class="text-center">2020 Star Pharmacy</p>
+                <p>© Copyright 2020 Star Pharmacy - All Rights Reserved</p>
             </footer>
         </section>
     </div>
@@ -275,7 +305,7 @@
     <!-- https://getbootstrap.com/ -->
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <!-- Slick Carousel -->
-
+	
     <script>
         function setCarousel() {
             var slider = $('.tm-img-slider');
@@ -360,8 +390,21 @@
                     }
                 });
         });
-    </script>
 
+		// Initialize and add the map
+		function initMap() {
+		// The location of Uluru
+		var uluru = {lat: -25.344, lng: 131.036};
+		// The map, centered at Uluru
+		var map = new google.maps.Map(
+			document.getElementById('map'), {zoom: 4, center: uluru});
+		// The marker, positioned at Uluru
+		var marker = new google.maps.Marker({position: uluru, map: map});
+		}
+    </script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 </body>
 
 </html>
