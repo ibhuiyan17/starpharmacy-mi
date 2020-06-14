@@ -267,13 +267,21 @@
             <div class="row">
                 <div class="col-md-6 tm-mb-sm-4 tm-2col-l">
                     <div class="contact-form">
-                        <form id="contact-form" method="post" action"">
-                            <input name="fullname" type="text" class="form-control" placeholder="Your Name.." required>
+                        <form id="contact-form" method="post" action"contact-form-handler.php">
+                            <input name="fullname" type="text" class="form-control" placeholder=" Your Name" required>
                             <br>
-                            <input name="lastname" type="email" class="form-control" placeholder="Your email.." 
+                            <input name="email" type="email" class="form-control" placeholder=" Your Email" 
                             required><br>
+                            <select name="issue"  class="form-control select" required>
+                                <option value="choose">Please Choose</option>
+                                <option value="option1">Prescription</option>
+                                <option value="option2">Consultation</option>
+                                <option value="option3">Insurance</option>
+                                <option value="option4">USA</option>
+                                <option value="option5">Other</option>  
+                            </select><br>    
         
-                                <textarea name="message" class="form-control" placeholder="Message.." row="4"
+                                <textarea name="message" class="form-control" placeholder=" Message" row="4" style="height:180px"
                                 required></textarea><br>
         
                                 <input type="submit" class="form-control submit" value="SEND MESSAGE">
@@ -281,25 +289,28 @@
                         </div>
                 </div>
                 <div class="col-md-6 tm-2col-r">
-                    <h4 class="mb-5">We can be reached by phone or email. Please don't hesitate to ask any questions you have.<h4>
-                        <h5>phone: 586-486-5037</h5>
-                        <h5> or email <a href="mailto:starpharmacymi@gmail.com">starpharmacymi@gmail.com</a></h5>
-        
-                        </br>
-                        <h5>Located at</h5>       
+                        <br><br>
+                        <h3><i class="fa fa-building" aria-hidden="true"></i>  Address</h2=3>
+                        <h5>24831 Ryan Rd</h5>
+                        <h5>Warren, MI 48091</h5>
+                        <br>
+                        <h5><i class="fa fa-phone" aria-hidden="true"></i> Phone</h5>
+                        <h5>586-486-5037</h5>
+                        <br>
+                        <h5><i class="fa fa-fax" aria-hidden="true"></i> Fax</h5>
+                        <h5>586-806-4086</h5>
+                        <br>
+                        <h5><i class="fa fa-envelope" aria-hidden="true"></i> Email</h5>
+                        <h5><a href="mailto:starpharmacymi@gmail.com">starpharmacymi@gmail.com</a></h5>       
                 </div>
             </div>
         </section>
-        <section class="tm-section-6" id="tm-section-6">
-            <div class="tm-address-box">
-				<hr class="my-4">	
-				<div id="map"></div>
-            </div>
-            <footer class="mt-5">
-                <p>© Copyright 2020 Star Pharmacy - All Rights Reserved</p>
-            </footer>
-        </section>
-    </div>
+        <h4 class="text-center">Please don't hesitate to ask any questions you have.</h4>
+        <br>
+		<div id="map"></div>
+        <footer>
+        <p>© Copyright 2020 Star Pharmacy - All Rights Reserved</p>
+        </footer>
     <!-- load JS files -->
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script src="js/popper.min.js"></script>
