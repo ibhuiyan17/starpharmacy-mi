@@ -7,14 +7,6 @@
     @media only screen and (min-width: 770px) {
         .mobile {display: none;}
     }
-    .header {
-        overflow: hidden;
-        background-color: transparent;
-        padding: 20px 10px;
-    }
-    .header-right {
-        float: right;
-    }
 	footer {
 	    text-align: center;
         width:100%;
