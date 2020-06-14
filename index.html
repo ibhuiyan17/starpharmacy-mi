@@ -246,7 +246,6 @@
             </div>
         </section>
         <section class="tm-section-6" id="tm-section-6">
-            <div class="tm-address-box">
                 <hr class="my-4">
                 <figure>
                     <div class="fixed-wrap">
@@ -259,7 +258,6 @@
                 <figure>
                     <div class="fixed-wrap">
                     <div id="fixed">
-                    </div>
                     </div>
                 </figure>	
         </section>      
@@ -408,16 +406,16 @@
 		// Initialize and add the map
 		function initMap() {
 		// The location of Uluru
-		var uluru = {lat: -25.344, lng: 131.036};
+		var pharmacy = {lat:42.475460, lng: -83.0658112};
 		// The map, centered at Uluru
 		var map = new google.maps.Map(
-			document.getElementById('map'), {zoom: 4, center: uluru});
+			document.getElementById('map'), {zoom: 16.8, center: pharmacy});
 		// The marker, positioned at Uluru
-		var marker = new google.maps.Marker({position: uluru, map: map});
+		var marker = new google.maps.Marker({position: pharmacy, map: map});
 		}
     </script>
 	<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgnyUuwptU7T6hI9gLMrVwLwYOA72DFuQ&callback=initMap">
     </script>
 </body>
 
