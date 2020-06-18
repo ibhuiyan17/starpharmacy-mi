@@ -72,9 +72,10 @@
                     <div class="col-md-auto">
                         <h6 ><i class="fas fa-map-marker-alt"></i>  
                             <a href="https://goo.gl/maps/v6p6NXfjSdb4bcpFA" rel="noopener noreferrer" target="_blank">24831 Ryan Rd Warren, MI 48091</a>
-                    </div>
-                    <div class="col-md-auto">
-                        <div id="timeDiv"></div>
+                            <span class="tab1"></span>
+                            <a href="#tm-section-6" class="btn2" ><div id="timeDiv"></div></a>
+                            
+                        </h6>    
                     </div>
                 </div>
             </div>       
@@ -476,8 +477,14 @@
         else if ((dayOfWeek == 1 ||dayOfWeek == 2 ||dayOfWeek == 3 || dayOfWeek == 4 || dayOfWeek == 5) && hour >= 9 && hour <= 18) 
         {
             hour = ((hour + 11) % 12 + 1);
-            timeDiv.innerHTML = 'we\'re open '+ today + ' from 9am' + '-' + '7pm';
+            timeDiv.innerHTML = 'we\'re open '+ 'today' + ' from 9am' + '-' + '7pm';
             timeDiv.className = 'open';
+        } 
+        else if (dayOfWeek == 0) 
+        {
+            hour = ((hour + 11) % 12 + 1);
+            timeDiv.innerHTML = 'we\'re closed '+ 'today';
+            timeDiv.className = 'closed';
         } 
         else 
         {
@@ -485,7 +492,7 @@
             {
                 hour = ((hour + 11) % 12 + 1); 
             }
-            timeDiv.innerHTML = 'It\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re closed!';
+            timeDiv.innerHTML = today + ' ' + hour + ':' + minutes + suffix + ' - we\'re closed!';
             timeDiv.className = 'closed';
         }
         };
