@@ -53,15 +53,9 @@
     }
     .header {
         overflow: hidden;
-        background-color: transparent;
+        background-color:transparent;;
         padding: 20px 10px;
 
-    }
-    .header-right {
-        float: right;
-    }
-    .header-left {
-        float: left;
     }
     #timeDiv {
         font-size: 15px;
@@ -132,24 +126,20 @@
     .table{
         font-size: 15px;
     }
+    .today {
+        background-color:#f2f2f2;
+    }
     .tab {
-        margin-left: 10px; 
+        margin-left: 22px; 
     }
     .tab1 {
         margin-left: 180px; 
     }
-    #inner {
-        display: table;
-        margin: 0 auto;
-    }
-    #outer {
-        width:100%
+    .tab2 {
+        margin-left: 5px; 
     }
 	#map {
     width: 100%;
     height: 400px;
     background-color: grey;
-    }
-    h5{
-        padding-left: 3px;
     }
