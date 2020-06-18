@@ -44,7 +44,6 @@
             renderPage = false;
         }
     </script>
-
 </head>
 
 <body>
@@ -56,30 +55,51 @@
     </div>
     <div class="container">
         <div class="header">
-            <div class="header-left">
-                <div class="row">
-                    <div class="col-md-auto">
-                        <h6 ><a href="https://www.facebook.com/starpharmacymi" class="fab fa-facebook"></a>
-                        <a href="mailto:starpharmacymi@gmail.com" class="fas fa-envelope" style = "text-indent : 1.0em";></a>
-                        <a href="https://www.linkedin.com/" class="fab fa-linkedin" style = "text-indent : 1.0em";></a>
-                        </h6>
+            <div class="desktop">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h6 style="text-align: left";><a href="https://www.facebook.com/starpharmacymi" class="fab fa-facebook"></a>
+                            <a href="mailto:starpharmacymi@gmail.com" class="fas fa-envelope" style = "text-indent : 1.0em";></a>
+                            <a href="https://www.linkedin.com/" class="fab fa-linkedin" style = "text-indent : 1.0em";></a>
+                            </h6> 
                     </div>
-                </div>
-            </div>
-            <div class="header-right">
-                <div class="row">
-                    <div class="col-md-auto">
-                        <h6 ><i class="fas fa-map-marker-alt"></i>  
+                    <div class="col">
+                        <h6 style="text-align: center";><i class="fas fa-map-marker-alt"></i>  
                             <a href="https://goo.gl/maps/v6p6NXfjSdb4bcpFA" rel="noopener noreferrer" target="_blank">24831 Ryan Rd Warren, MI 48091</a>
-                            <span class="tab1"></span>
-                            <a href="#time" class="btn2" ><div id="timeDiv"></div></a>
-                            
-                        </h6>    
+                            </h6>
                     </div>
-                </div>
-            </div>       
+                    <div class="col">
+                        <h6 style="text-align: right";><a href="#time" class="btn2" ><div id="timeDiv"></div></a></h6>
+                    </div>
+                </div>    
+                <hr class="my-1">
+            </div>
+            <div class="mobile">
+                    <div class="row">
+                    <div class="col">
+                        <h6 style="text-align: center";><a href="https://www.facebook.com/starpharmacymi" class="fab fa-facebook"></a>
+                            <a href="mailto:starpharmacymi@gmail.com" class="fas fa-envelope" style = "text-indent : 1.0em";></a>
+                            <a href="https://www.linkedin.com/" class="fab fa-linkedin" style = "text-indent : 1.0em";></a>
+                            </h6>
+                    </div> 
+                    </div>
+                    <div class="row">
+                    <div class="col">
+                        <h6 style="text-align: center";><i class="fas fa-map-marker-alt"></i>  
+                            <a href="https://goo.gl/maps/v6p6NXfjSdb4bcpFA" rel="noopener noreferrer" target="_blank">24831 Ryan Rd Warren, MI 48091</a>
+                            </h6>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col">
+                        <h6 style="text-align: center";><a href="#time" class="btn2" ><div id="operation"></div></a></h6>
+                    </div>
+                    </div>
+                    
+                <hr class="my-1">
+            </div>
         </div>
-        <hr class="my-1">
+        
         <section class="tm-section-head" id="top">
             <header id="header" class="text-center tm-text-gray">
                 <div class="desktop">
@@ -269,25 +289,12 @@
                 </div>
             </div>
         </section>
-        <section class="tm-section-6" id="tm-section-6">
-                <hr class="my-4">
-                <figure>
-                    <div class="fixed-wrap">
-                    <div id="fixed">
-                    </div>
-                    </div>
-                </figure>
+        <section class="tm-section-3" id="contact">
+                <hr class="my-3">
                 <h2 class="mb-4"><center>Contact Us</center></h2>
-                <hr class="my-4">	
-                <figure>
-                    <div class="fixed-wrap">
-                    <div id="fixed">
-                    </div>
-                </figure>	
-        </section>      
-        <section class="tm-section-3 tm-section-mb" id="contacts">
+                <hr class="my-1">	
             <div class="row">
-                <div class="col-md-6 tm-2col-l">
+                <div class="col-md-6">
                     <div class="contact-form">
                         <form id="contact-form" method="post" action"contact-form-handler.php">
                             <input name="fullname" type="text" class="form-control" placeholder=" Your Name" required>
@@ -307,65 +314,91 @@
                                 required></textarea><br>
         
                                 <input type="submit" class="form-control submit" value="SEND MESSAGE">
-                          </form>
-                        </div>
-                        <div class="mobile"> 
+                        </form>
+                    </div>
+                        <div class="mobile">
+                            <br> 
                             <h4 class="text-center">Please don't hesitate to ask any questions you have.</h4>
                         </div>
                 </div>
-                <div class="col-md-6 tm-2col-r" id="contact">
+                <div class="col-md-6">
                     <br>
                     <div class="row">
-                        <div class="col-md-6 tm-3col-l"> 
-                            <h5><i class="fa fa-map-marker-alt" aria-hidden="true"></i>  <b>Address</b></h5>
-                            <h6 style = "text-indent : 1.3em";><a href="https://goo.gl/maps/v6p6NXfjSdb4bcpFA" rel="noopener noreferrer" target="_blank">24831 Ryan Rd <br>
-                            <span class="tab">Warren, MI 48091</a></span></h6>
-                            <br>
-                            <h5><i class="fa fa-phone" aria-hidden="true"></i> <b>Phone</b></h5>
-                            <h6 style = "text-indent : 1.5em";><a href="tel:586-486-5037">586-486-5037</a></h6>
-                            <br>
-                            <h5><i class="fa fa-fax" aria-hidden="true"></i> <b>Fax</b></h5>
-                            <h6 style = "text-indent : 1.5em";><a href="fax:586-806-6958">586-806-6958</a></h6>
-                            <br>
-                            <h5><i class="fa fa-envelope" aria-hidden="true"></i> <b>Email</b></h5>
-                            <h6 style = "text-indent : 1.5em";><a href="mailto:starpharmacymi@gmail.com">starpharmacymi@gmail.com</a></h6>
-                            <br>
-                            <div class="desktop"> 
-                                <div class="fb-page" data-href="https://www.facebook.com/StarPharmacymi" data-tabs="" 
-                                data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" 
-                                data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/StarPharmacymi" 
-                                class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/StarPharmacymi">Star Pharmacy</a></blockquote>
+                        <div class="col-md-6">
+                            <div class="row justify-content-around">
+                            <div class="col-12">
+                            <h5><i class="fa fa-map-marker-alt" aria-hidden="true"></i><span class="tab"><b>Address</b></span></h5>
+                            </div>
+                            </div>
+                            <div class="row justify-content-around">
+                                <div class="col-10">
+                                    <h6><a href="https://goo.gl/maps/v6p6NXfjSdb4bcpFA" rel="noopener noreferrer" target="_blank">24831 Ryan Rd <br>
+                                        Warren, MI 48091</a></td></tr></h6>
                                 </div>
-                            </div>    
+                            </div>
+                            <br>
+                            <div class="row justify-content-around">
+                            <div class="col-12"> 
+                            <h5><i class="fa fa-phone" aria-hidden="true"></i> <b>Phone</b></h5>
+                            </div>
+                            </div>  
+                            <div class="row justify-content-around">
+                            <div class="col-10">
+                                <h6><a href="tel:586-486-5037">586-486-5037</a></h6>
+                            </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-around">
+                            <div class="col-12"> 
+                            <h5><i class="fa fa-fax" aria-hidden="true"></i> <b>Fax</b></h5>
+                            </div>
+                            </div>
+                            <div class="row justify-content-around">
+                            <div class="col-10">
+                                <h6><a href="fax:586-806-6958">586-806-6958</a></h6>
+                            </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-around">
+                            <div class="col-12">
+                            <h5><i class="fa fa-envelope" aria-hidden="true"></i> <b>Email</b></h5>
+                            </div>
+                            </div>
+                            <div class="row justify-content-around">
+                            <div class="col-10">
+                                <h6><a href="mailto:starpharmacymi@gmail.com">starpharmacymi@gmail.com</a></h6>
+                            </div>
+                            </div>
+                            <br>  
                         </div>
-                        <div class="col-md-6 tm-3col-r" id="time">
+                        <div class="col-md-6" id="time">
                             <div class="mobile"> 
                                 <hr class="my-1">
                             </div>
                             <h5><i class="fas fa-clock"></i> <b>Hour of Operations</b></h5>
-                            <hr class="my-1">
-                            <h6 style = "text-indent : 1.8em";> Monday: 9am-7pm </h6>
-                            <h6 style = "text-indent : 1.8em";> Tuesday: 9am-7pm </h6>
-                            <h6 style = "text-indent : 1.8em";> Wednesday: 9am-7pm </h6>
-                            <h6 style = "text-indent : 1.8em";> Thursday: 9am-7pm </h6>
-                            <h6 style = "text-indent : 1.8em";> Friday: 9am-7pm </h6>
-                            <h6 style = "text-indent : 1.8em";> Saturday: 10am-3pm </h6>
-                            <h6 style = "text-indent : 1.8em";> Sunday: CLOSED </h6>
-                            <hr class="my-1">
-                            <br>
-                            <div class="mobile"> 
-                                <div class="fb-page" data-href="https://www.facebook.com/StarPharmacymi" data-tabs="" 
+                            <table class="table table-hover">
+                                <tbody>
+                                    <tr><th>Sunday</th><td>Closed</td></tr>
+                                    <tr><th>Monday</th><td>9am - 7pm</td></tr>
+                                    <tr><th>Tuesday</th><td>9am - 7pm</td></tr>
+                                    <tr><th>Wednesday</th><td>9am - 7pm</td></tr>
+                                    <tr><th>Thursday</th><td>9am - 7pm</td></tr>
+                                    <tr><th>Friday</th><td>9am - 7pm</td></tr>
+                                    <tr><th>Saturday</th><td>10am - 3pm</td></tr>
+                                </tbody>
+                            </table>
+                                <div class="fb-page"data-href="https://www.facebook.com/StarPharmacymi" data-tabs="" 
                                 data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" 
                                 data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/StarPharmacymi" 
                                 class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/StarPharmacymi">Star Pharmacy</a></blockquote>
                                 </div>
-                            </div>
-                        </div>     
+                        </div>
                     </div>
-                </div>
+                </div>    
             </div>
         </section>
-        <div class="desktop"> 
+        <div class="desktop">
+        <br> 
         <h4 class="text-center">Please don't hesitate to ask any questions you have.</h4>
         </div>
         <br>
@@ -478,6 +511,8 @@
         var checkTime = function() {
         var today = weekday[now.getDay()];
         var timeDiv = document.getElementById('timeDiv');
+        var operation = document.getElementById('operation');
+
         var dayOfWeek = now.getDay();
         var hour = now.getHours();
         var minutes = now.getMinutes();
@@ -493,18 +528,24 @@
             hour = ((hour + 11) % 12 + 1); 
             timeDiv.innerHTML = 'we\'re open '+ today + ' from 10am' + '-' + '3pm';
             timeDiv.className = 'open';
+            operation.innerHTML = 'we\'re open '+ today + ' from 10am' + '-' + '3pm';
+            operation.className = 'open';
         }     
         else if ((dayOfWeek == 1 ||dayOfWeek == 2 ||dayOfWeek == 3 || dayOfWeek == 4 || dayOfWeek == 5) && hour >= 9 && hour <= 18) 
         {
             hour = ((hour + 11) % 12 + 1);
             timeDiv.innerHTML = 'we\'re open '+ 'today' + ' from 9am' + '-' + '7pm';
             timeDiv.className = 'open';
+            operation.innerHTML = 'we\'re open '+ 'today' + ' from 9am' + '-' + '7pm';
+            operation.className = 'open';
         } 
         else if (dayOfWeek == 0) 
         {
             hour = ((hour + 11) % 12 + 1);
             timeDiv.innerHTML = 'we\'re closed '+ 'today';
             timeDiv.className = 'closed';
+            operation.innerHTML = 'we\'re closed '+ 'today';
+            operation.className = 'closed';
         } 
         else 
         {
@@ -514,6 +555,8 @@
             }
             timeDiv.innerHTML = today + ' ' + hour + ':' + minutes + suffix + ' - we\'re closed!';
             timeDiv.className = 'closed';
+            operation.innerHTML = today + ' ' + hour + ':' + minutes + suffix + ' - we\'re closed!';
+            operation.className = 'closed';
         }
         };
         var currentDay = weekday[now.getDay()];

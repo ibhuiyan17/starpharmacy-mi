@@ -20,12 +20,26 @@
         color: #fff !important;
         text-transform: uppercase;
         text-decoration: none;
-        background:#fff;
+        background:transparent;
         padding: 5px;
         display: inline-block;
         transition: all 0.4s ease 0s;
     }
     .btn2:hover {
+        padding: 5px;
+        background:#b3b3b3;
+        transition: all 0.4s ease 0s;
+    } 
+    .btn3{
+        color: #fff !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background:transparent;
+        padding: 5px;
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+    }
+    .btn3:hover {
         padding: 5px;
         background:#b3b3b3;
         transition: all 0.4s ease 0s;
@@ -50,13 +64,19 @@
         float: left;
     }
     #timeDiv {
-        font-size: 16px;
+        font-size: 15px;
         text-transform: uppercase;
         width: 100%;
         margin: 0 auto;
         font-weight: 600;
-      }
-      
+    }
+    #operation {
+        font-size: 15px;
+        text-transform: uppercase;
+        width: 100%;
+        margin: 0 auto;
+        font-weight: 600;
+    }  
     .open {
         color: #27ae60;
     } 
@@ -109,11 +129,21 @@
         background-color: red;
         cursor: pointer;
     }
+    .table{
+        font-size: 15px;
+    }
     .tab {
-        margin-left: 20px; 
+        margin-left: 10px; 
     }
     .tab1 {
         margin-left: 180px; 
+    }
+    #inner {
+        display: table;
+        margin: 0 auto;
+    }
+    #outer {
+        width:100%
     }
 	#map {
     width: 100%;
