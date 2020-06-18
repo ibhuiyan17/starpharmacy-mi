@@ -27,7 +27,7 @@
     }
     .btn2:hover {
         padding: 5px;
-        background:gray;
+        background:#b3b3b3;
         transition: all 0.4s ease 0s;
     }     
     a:hover {
