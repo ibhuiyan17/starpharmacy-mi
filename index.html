@@ -57,6 +57,7 @@
     </div>
     <div class="container">
         <div class="header">
+            <div class="header-left">
                 <div class="row">
                     <div class="col-md-auto">
                         <h6 ><a href="https://www.facebook.com/starpharmacymi" class="fab fa-facebook"></a>
@@ -64,31 +65,21 @@
                         <a href="https://www.linkedin.com/" class="fab fa-linkedin" style = "text-indent : 1.0em";></a>
                         </h6>
                     </div>
-                    <div class="col-lg-3">
-                        
-                    </div>
-                    <div class="col-md-auto">
-                        
-                    </div>
-                    <div class="col-md-auto">
-                        <h6 class="center";><i class="fas fa-map-marker-alt"></i>  
-                        24831 Ryan Rd Warren, MI 48091<h6>
-                    </div>
-                    <div class=" col-md-auto">
-                        <h6 class="center";><i class="fas fa-clock"></i>
-                        Mon-Fri: 9am-7pm </h6>
-                    </div>
-                    <div class=" col-md-auto">
-                        <h6 class="center";><i class="far fa-clock"></i>
-                        Sat: 10am-3pm</h6>
-                    </div>
-                    <div class=" col-md-auto">
-                        <h6 class="center";><i class="far fa-clock"></i>
-                        Sun: CLOSED</h6>
-                    </div>
+                </div>
             </div>
-            <hr class="my-1">
+            <div class="header-right">
+                <div class="row">
+                    <div class="col-md-auto">
+                        <h6 ><i class="fas fa-map-marker-alt"></i>  
+                            <a href="https://goo.gl/maps/v6p6NXfjSdb4bcpFA" rel="noopener noreferrer" target="_blank">24831 Ryan Rd Warren, MI 48091</a>
+                    </div>
+                    <div class="col-md-auto">
+                        <div id="timeDiv"></div>
+                    </div>
+                </div>
+            </div>       
         </div>
+        <hr class="my-1">
         <section class="tm-section-head" id="top">
             <header id="header" class="text-center tm-text-gray">
                 <div class="desktop">
@@ -324,17 +315,17 @@
                     <div class="row">
                         <div class="col-md-6 tm-2col-l"> 
                             <h5><i class="fa fa-map-marker-alt" aria-hidden="true"></i>  <b>Address</b></h5>
-                            <h6 style = "text-indent : 1.3em";>24831 Ryan Rd</h6>
-                            <h6 style = "text-indent : 1.3em";>Warren, MI 48091</h6>
+                            <h6 style = "text-indent : 1.3em";><a href="https://goo.gl/maps/v6p6NXfjSdb4bcpFA" rel="noopener noreferrer" target="_blank">24831 Ryan Rd <br>
+                            <span class="tab">Warren, MI 48091</a></span></h6>
                             <br>
                             <h5><i class="fa fa-phone" aria-hidden="true"></i> <b>Phone</b></h5>
-                            <h6 style = "text-indent : 1.3em";>586-486-5037</h6>
+                            <h6 style = "text-indent : 1.5em";><a href="tel:586-486-5037">586-486-5037</a></h6>
                             <br>
                             <h5><i class="fa fa-fax" aria-hidden="true"></i> <b>Fax</b></h5>
-                            <h6 style = "text-indent : 1.3em";>586-806-6958</h6>
+                            <h6 style = "text-indent : 1.5em";><a href="fax:586-806-6958">586-806-6958</a></h6>
                             <br>
                             <h5><i class="fa fa-envelope" aria-hidden="true"></i> <b>Email</b></h5>
-                            <h6 style = "text-indent : 1.3em";><a href="mailto:starpharmacymi@gmail.com">starpharmacymi@gmail.com</a></h6>
+                            <h6 style = "text-indent : 1.5em";><a href="mailto:starpharmacymi@gmail.com">starpharmacymi@gmail.com</a></h6>
                             <br>
                         </div>
                         <div class="col-md-6 tm-2col-r">
@@ -365,15 +356,15 @@
         <footer>
         <p>© Copyright 2020 Star Pharmacy - All Rights Reserved</p>
         </footer>
-    <!-- load JS files -->
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <!-- https://popper.js.org/ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- https://getbootstrap.com/ -->
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-    <!-- Slick Carousel -->
-	
+        <!-- load JS files -->
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <!-- https://popper.js.org/ -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- https://getbootstrap.com/ -->
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <!-- Slick Carousel -->
+	</div>
     <script>
         function setCarousel() {
             var slider = $('.tm-img-slider');
@@ -458,7 +449,51 @@
                     }
                 });
         });
-
+        var now = new Date();
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+        var checkTime = function() {
+        var today = weekday[now.getDay()];
+        var timeDiv = document.getElementById('timeDiv');
+        var dayOfWeek = now.getDay();
+        var hour = now.getHours();
+        var minutes = now.getMinutes();
+        //add AM or PM
+        var suffix = hour >= 12 ? "PM" : "AM";
+        // add 0 to one digit minutes
+        if ((dayOfWeek == 6) && hour >= 10 && hour <= 15) 
+        {
+            hour = ((hour + 11) % 12 + 1); 
+            timeDiv.innerHTML = 'we\'re open '+ today + ' from 10am' + '-' + '3pm';
+            timeDiv.className = 'open';
+        }     
+        else if ((dayOfWeek == 1 ||dayOfWeek == 2 ||dayOfWeek == 3 || dayOfWeek == 4 || dayOfWeek == 5) && hour >= 9 && hour <= 18) 
+        {
+            hour = ((hour + 11) % 12 + 1);
+            timeDiv.innerHTML = 'we\'re open '+ today + ' from 9am' + '-' + '7pm';
+            timeDiv.className = 'open';
+        } 
+        else 
+        {
+            if (hour == 0 || hour > 12) 
+            {
+                hour = ((hour + 11) % 12 + 1); 
+            }
+            timeDiv.innerHTML = 'It\'s ' + today + ' ' + hour + ':' + minutes + suffix + ' - we\'re closed!';
+            timeDiv.className = 'closed';
+        }
+        };
+        var currentDay = weekday[now.getDay()];
+        var currentDayID = "#" + currentDay; //gets todays weekday and turns it into id
+        $(currentDayID).toggleClass("today"); //hightlights today in the view hours modal popup
+        setInterval(checkTime, 1000);
+        checkTime();
 		// Initialize and add the map
 		function initMap() {
 		// The location of Uluru
