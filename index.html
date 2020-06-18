@@ -483,6 +483,10 @@
         var minutes = now.getMinutes();
         //add AM or PM
         var suffix = hour >= 12 ? "PM" : "AM";
+        if (minutes < 10) 
+        {
+        minutes = "0" + minutes
+         };
         // add 0 to one digit minutes
         if ((dayOfWeek == 6) && hour >= 10 && hour <= 15) 
         {
