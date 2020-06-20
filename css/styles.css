@@ -125,6 +125,16 @@
     .tab1 {
         margin-left: 5px; 
     }
+    g:link {
+        color: blue;
+      }
+    g:visited {
+        color: blue;
+        text-decoration: none;
+    }
+    g:hover {
+        color: blue;
+    }      
 	#map {
     width: 100%;
     height: 400px;
