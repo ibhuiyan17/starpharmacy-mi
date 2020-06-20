@@ -40,6 +40,33 @@
         opacity: 0.7;
         color:black;
     }
+    /*--------------------------------------------------------------
+    # Back to top button
+    --------------------------------------------------------------*/
+    .back-to-top {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        border-radius: 3px;
+        right: 15px;
+        bottom: 15px;
+        background: lightgray;
+        color: #fff;
+        transition: display 0.5s ease-in-out;
+    }
+    
+    .back-to-top i {
+        font-size: 20px;
+        position: absolute;
+        top: 9px;
+        left: 11px;
+    }
+    
+    .back-to-top:hover {
+        color: #fff;
+        background: #ff8000;
+        transition: background 0.2s ease-in-out;
+    }
     
     /*--------------------------------------------------------------
     # Top Header
@@ -102,7 +129,7 @@
     form .submit{
         background: #ff8000;
         border-color:transparent;
-        color:black;
+        color:white;
         font-size:20px;
         font-weight:bold;
         letter-spacing: 2px;
