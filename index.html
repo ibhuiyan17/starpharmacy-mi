@@ -54,6 +54,7 @@
         <div class="loader-section section-right"></div>
     </div>
     <div class="container">
+       <!-- ======= Top Header Section ======= -->
         <div class="header">
             <div class="desktop">
                 <div class="row align-items-center">
@@ -98,8 +99,9 @@
                     
                 <hr class="my-1">
             </div>
-        </div>
-        
+        </div><!-- End Our Top Header Section -->
+
+        <!-- ======= Header Section ======= -->
         <section class="tm-section-head" id="top">
             <header id="header" class="text-center tm-text-gray">
                 <div class="desktop">
@@ -140,8 +142,9 @@
                 At Star Pharmacy, we are dedicated to provide quality services that go beyond just filling prescriptions. We 
                 strive to empower each of our unique patients with the ability to be in control of their pharmaceutical needs. 
             </h3>
-        </div>
+        </div><!-- End Our Header Section -->
 
+        <!-- ======= Services Section ======= -->
         <section class="tm-section-2 tm-section-mb" id="tm-section-2">
             <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5">
@@ -178,8 +181,9 @@
                     </header>
                 </div>
             </div>
-        </section>
+        </section><!-- End Our Service Section -->
 
+        <!-- ======= About Service Section ======= -->
         <section class="tm-section-5" id="tm-section-5">
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12">
@@ -233,7 +237,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section><!-- End Our About Service Section -->
 
         <div class="desktop">
             <section class="tm-section-4 tm-section-mb" id="tm-section-4">
@@ -242,7 +246,7 @@
                 </div>
             </section>
         </div>
-
+        <!-- ======= Team Members Section ======= -->
         <section class="tm-section-3 tm-section-mb" id="tm-section-3">
             <div class="row">
                 <div class="col-md-6 tm-mb-sm-4 tm-2col-l">
@@ -288,7 +292,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section><!-- End Our Team Member Section -->
+
+        <!-- ======= Contact Us Section ======= -->
         <section class="tm-section-3" id="contact">
                 <hr class="my-3">
                 <h2 class="mb-4"><center>Contact Us</center></h2>
@@ -354,7 +360,7 @@
                     <div class="row">
                         <div class="col-md-auto">
                             <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
-                            <span class="tab2"></span><b>Address</b><br><span class="tab"></span><a href="https://goo.gl/maps/v6p6NXfjSdb4bcpFA" rel="noopener noreferrer" 
+                            <span class="tab1"></span><b>Address</b><br><span class="tab"></span><a href="https://goo.gl/maps/v6p6NXfjSdb4bcpFA" rel="noopener noreferrer" 
                             target="_blank">24831 Ryan Rd <br>
                             <span class="tab"></span>Warren, MI 48091</a>
                         </div>
@@ -388,16 +394,19 @@
                         </div>
                 </div>
             </div>
-        </section>
-        <div class="desktop">
-        <br> 
-        <h4 class="text-center">Please don't hesitate to ask any questions you have.</h4>
-        </div>
-        <br>
-		<div id="map"></div>
+            <div class="desktop">
+                <br> 
+                <h4 class="text-center">Please don't hesitate to ask any questions you have.</h4>
+                </div>
+                <br>
+                <div id="map"></div>
+        </section><!-- End Our Contact Us Section -->
+        
+        <!-- ======= Footer Section ======= -->
         <footer>
         <p>© Copyright 2020 Star Pharmacy - All Rights Reserved</p>
-        </footer>
+        </footer><!-- End Our Footer Section -->
+
         <!-- load JS files -->
         <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
         <script src="js/popper.min.js"></script>
@@ -408,6 +417,7 @@
         <!-- Slick Carousel -->
 	</div>
     <script>
+        //-- ======= Gallery Script ======= --
         function setCarousel() {
             var slider = $('.tm-img-slider');
 
@@ -490,7 +500,9 @@
                         }
                     }
                 });
-        });
+        });//-- End Our Gallery Script --
+
+        //-- ======= Hour of Operations Script ======= --
         var now = new Date();
         var weekday = new Array(7);
         weekday[0] = "Sunday";
@@ -555,7 +567,9 @@
         var currentDayID = "#" + currentDay; //gets todays weekday and turns it into id
         $(currentDayID).toggleClass("today"); //hightlights today in the view hours modal popup
         setInterval(checkTime, 1000);
-        checkTime();
+        checkTime();//-- End Our Hour of Operations Script --
+
+        //-- ======= Google Map Script ======= --
 		// Initialize and add the map
 		function initMap() {
 		// The location of Uluru
@@ -564,7 +578,29 @@
 		var map = new google.maps.Map(
 			document.getElementById('map'), {zoom: 16.8, center: pharmacy});
 		// The marker, positioned at Uluru
-		var marker = new google.maps.Marker({position: pharmacy, map: map});
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h4 id="firstHeading" class="firstHeading">Star Pharmacy</h4>'+
+            '<div id="bodyContent">'+
+            '<p>Located on Ryan road and cross street 10 mile. We are next to a Wendys Restaurant and in front of Burger King</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: pharmacy,
+          map: map,
+          title: 'Star Pharmacy'
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });//-- End Our Google Map Script --
+
 		}
     </script>
     <div id="fb-root"></div>
