@@ -18,29 +18,15 @@
     a:visited {
         color: black;
         text-decoration: none;
-    }
-    .btn2{
-        color: #fff !important;
-        text-transform: uppercase;
-        text-decoration: none;
-        background:transparent;
-        padding: 5px;
-        display: inline-block;
-        transition: all 0.4s ease 0s;
-    }
-    .btn2:hover {
-        padding: 5px;
-        background:#b3b3b3;
-        transition: all 0.4s ease 0s;
     }    
     a:hover {
-        color: blue;
+        color: red;
       }
     .fa:hover {
         opacity: 0.7;
         color:black;
     }
-    
+
     /*--------------------------------------------------------------
     # Back to top button
     --------------------------------------------------------------*/
@@ -77,6 +63,20 @@
         background-color:transparent;;
         padding: 20px 10px;
 
+    }
+    .btn2{
+        color: #fff !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background:transparent;
+        padding: 5px;
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+    }
+    .btn2:hover {
+        padding: 5px;
+        background:lightgray;
+        transition: all 0.4s ease 0s;
     }
     #timeDiv {
         font-size: 15px;
