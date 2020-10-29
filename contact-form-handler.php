@@ -4,20 +4,17 @@
     $subject = $_Post['subject'];
     $message = $_Post['message'];
 
-    $email_from= 'Starpharmacy@Starpharmacy.com';
+    $to= 'starpharmacymi@gmail.com';
 
-    $email_subject= "New Website Form Submission";
+    $email_subject= 'New Website Form Submission'.$subject;
 
     $email_body= "User Name: $name.\n"
-                    "User Email: $visitor_email.\n".
-                        "User Subject: $subject.\n".
+                    "User Email: $visitor_email.\n"
+                        "User Subject: $subject.\n"
                             "User Message: $message.\n";
 
-    #to= "meaadhassan09@gmail.com";
 
-    $headers ="From: $email_from \r \n";
-
-    $headers .="Reply-To: $visitor_email \r\n";
+    $headers ='From: '.$visitor_email;
     
     mail($to, $email_subject, $email_body,$headers);
 
