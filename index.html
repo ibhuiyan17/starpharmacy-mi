@@ -32,6 +32,7 @@
     <!-- tooplate style -->
     <link rel="stylesheet" href="css/styles.css">
 
+    <script src="js/email.js"></script>
     <script>
         var renderPage = true;
 
@@ -303,23 +304,23 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="contact-form">
-                        <form id="contact-form" method="post"> <!-- action="contact-form-handler.php"-->
-                            <input name="fullname" type="text" class="form-control" placeholder=" John Doe" required>
+                        <form id="contact-form" onsubmit="return false"> 
+                            <input name="fullname" id="fullname" type="text" class="form-control" placeholder=" John Doe" required>
                             <br>
-                            <input name="email" type="email" class="form-control" placeholder=" John Doe@Starpharmarcy.com" 
-                            required><br>
-                            <select name="subject"  class="form-control select" required>
-                                <option value="choose">Please Choose</option>
-                                <option value="option1">Prescription</option>
-                                <option value="option2">Consultation</option>
-                                <option value="option3">Insurance</option>
-                                <option value="option4">Other</option>  
-                            </select><br>    
-        
-                                <textarea name="message" class="form-control" placeholder=" Message..." row="4" style="height:180px"
-                                required></textarea><br>
-        
-                                <input type="submit" class="form-control submit" value="SEND MESSAGE">
+                            <input name="email" id="email" type="email" class="form-control" placeholder=" John Doe@Starpharmarcy.com" required>
+                            <br>
+                            <select name="subject" id="subject" class="form-control select" required>
+                                <option value="">Please Choose</option>
+                                <option value="prescription">Prescription</option>
+                                <option value="consultation">Consultation</option>
+                                <option value="insurance">Insurance</option>
+                                <option value="other">Other</option>  
+                            </select>
+                            <br>    
+                            <textarea name="message" id="message" class="form-control" placeholder=" Message..." row="4" style="height:180px" required></textarea>
+                            <br>
+                            <!-- <input type="submit" class="form-control submit" value="Send Message"> -->
+                            <button onclick="sendEmail()">Send Message</button>
                         </form>
                     </div>
                         <div class="mobile">
@@ -405,7 +406,7 @@
         
         <!-- ======= Footer Section ======= -->
         <footer>
-        <p>© Copyright 2020 Star Pharmacy - All Rights Reserved</p>
+        <p>© Copyright 2021 Star Pharmacy - All Rights Reserved</p>
         </footer><!-- End Our Footer Section -->
 
         <div class="desktop">
