@@ -5,12 +5,11 @@ const sendEmailEndpoint = '/sendemail';
 const emailFeatureEnabled = false; // temporary feature flag
 
 sendEmail = () => {
+    console.log('send clicked');
     if (!emailFeatureEnabled) {
         alert('Email feature is not yet enabled :(.');
         return;
     }
-
-    console.log('send clicked');
 
     if (!formValid()) {
         console.log('invalid form');
