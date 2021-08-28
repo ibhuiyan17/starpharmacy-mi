@@ -1,9 +1,15 @@
 const formFields = ['fullname', 'email', 'subject', 'message'];
-const baseUrl = 'https://us-central1-starpharmacy-mi.cloudfunctions.net/api'
-const sendEmailEndpoint = '/sendemail'
+const baseUrl = 'https://us-central1-starpharmacy-mi.cloudfunctions.net/api';
+const sendEmailEndpoint = '/sendemail';
+
+const emailFeatureEnabled = false; // temporary feature flag
 
 sendEmail = () => {
     console.log('send clicked');
+    if (!emailFeatureEnabled) {
+        alert('Email feature is not yet enabled :(.');
+        return;
+    }
 
     if (!formValid()) {
         console.log('invalid form');
