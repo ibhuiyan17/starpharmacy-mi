@@ -25,6 +25,49 @@ export const site = {
 
   facebook: "https://www.facebook.com/starpharmacymi",
 
+  // ---- Online portal (Rx365 by Liberty Software) ----
+  // TODO: replace this placeholder with the real portal link from the
+  // pharmacy's Liberty Software / Rx365 operator. One-line change.
+  rx365PortalUrl: "https://starpharmacy.rx365.com", // PLACEHOLDER — confirm before launch
+  rx365PortalConfigured: false, // flip to true once the URL above is verified
+
+  // ---- Delivery zone (ZIP codes the pharmacy delivers to, free) ----
+  // Warren, MI and surrounding communities. Edit as the radius grows.
+  deliveryZips: [
+    "48088", "48089", "48091", "48092", "48093", // Warren
+    "48066", "48312", "48310", "48313",           // Roseville / Sterling Heights
+    "48021", "48015", "48030",                    // Eastpointe / Center Line / Hazel Park
+    "48071", "48205", "48021",                    // Madison Heights / Detroit edge
+  ] as string[],
+
+  // ---- FAQ ----
+  faqs: [
+    {
+      q: "How much does delivery cost?",
+      a: "Nothing. Free same-day home delivery is handled by our own trusted local drivers — no fees, no mail-order delays.",
+    },
+    {
+      q: "How do I switch from CVS or Walgreens?",
+      a: "Click “Switch to Us” and fill out a 60-second form with your name, phone, and which pharmacy you're leaving. We call your old store, pull your prescriptions over, and text you when everything's ready. You never wait on hold.",
+    },
+    {
+      q: "What are automatic monthly refills?",
+      a: "Using Med-Sync, we align all of your monthly medications so they refill on the same day each month. You think about it once — we handle the rest and deliver them together.",
+    },
+    {
+      q: "Can I manage my family's prescriptions?",
+      a: "Yes. You can manage refills and deliveries for parents, children, or other family members from one place — by phone or through the online portal.",
+    },
+    {
+      q: "Do you accept my insurance?",
+      a: "We accept most insurance plans and will match or beat competitor prices. Call us at 586-486-5037 and we'll confirm your coverage in minutes.",
+    },
+    {
+      q: "I'm not tech-savvy. Can I still use you?",
+      a: "Absolutely. You can do everything the old-fashioned way — just call or walk in. Our staff handles refills and keeps your info securely on file. No app required.",
+    },
+  ],
+
   // Hours in 24h. open/close are local hours; null = closed all day.
   hours: [
     { day: "Sunday", open: null, close: null, label: "Closed" },

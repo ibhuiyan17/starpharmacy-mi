@@ -52,7 +52,7 @@ export default function Services() {
                 <ul className="mt-4 space-y-2.5">
                   {s.list.map((item) => (
                     <li key={item} className="flex items-start gap-2.5 text-text-body">
-                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-green" />
                       <span>{item}</span>
                     </li>
                   ))}

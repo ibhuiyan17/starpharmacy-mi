@@ -1,66 +1,113 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 /* =====================================================================
    STAR PHARMACY — Design System
    Clean, light, trustworthy healthcare palette.
    Borrows the polish of the Precision Funding site (glass cards, soft
    gradients, smooth motion, modern type) in a calm medical palette.
+
+   Convention: every color token is a raw HSL triplet, wrapped with
+   hsl(...) in @theme and in utilities. shadcn/ui's semantic tokens
+   (--primary, --border, --ring, etc.) are mapped to the brand below so
+   shadcn components are automatically on-brand.
    ===================================================================== */
 
 :root {
   /* Surfaces */
-  --bg-page: 204 60% 98%;          /* soft cool white */
-  --bg-page-2: 200 55% 95%;        /* faint blue tint for gradients */
-  --surface: 0 0% 100%;            /* card white */
+  --bg-page: 204 60% 98%;
+  --bg-page-2: 200 55% 95%;
+  --surface: 0 0% 100%;
   --surface-muted: 204 40% 97%;
 
   /* Brand — calming medical blue → teal */
-  --brand: 201 96% 38%;            /* primary blue  #0a82c4-ish */
+  --brand: 201 96% 38%;
   --brand-dark: 209 80% 28%;
   --brand-light: 199 95% 50%;
-  --teal: 184 78% 40%;             /* teal accent */
-  --accent: 158 72% 40%;           /* health green  */
+  --teal: 184 78% 40%;
+  --green: 158 72% 40%;
 
   /* Text */
-  --text-header: 213 40% 16%;      /* slate-900 */
-  --text-body: 213 18% 34%;        /* slate-600 */
+  --text-header: 213 40% 16%;
+  --text-body: 213 18% 34%;
   --text-muted: 213 14% 50%;
   --text-on-brand: 0 0% 100%;
 
-  /* Lines / rings */
-  --border: 210 24% 90%;
-  --ring: 201 96% 45%;
   --radius: 1rem;
+
+  /* shadcn/ui semantic tokens (mapped to the brand) */
+  --background: 204 60% 98%;
+  --foreground: 213 40% 16%;
+  --card: 0 0% 100%;
+  --card-foreground: 213 40% 16%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 213 40% 16%;
+  --primary: 201 96% 38%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 204 40% 96%;
+  --secondary-foreground: 213 40% 16%;
+  --muted: 204 40% 96%;
+  --muted-foreground: 213 14% 50%;
+  --accent: 201 90% 94%;
+  --accent-foreground: 201 96% 28%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 210 24% 90%;
+  --input: 210 24% 90%;
+  --ring: 201 96% 45%;
 }
 
 @theme inline {
+  /* Brand + surface tokens */
   --color-bg-page: hsl(var(--bg-page));
   --color-bg-page-2: hsl(var(--bg-page-2));
   --color-surface: hsl(var(--surface));
   --color-surface-muted: hsl(var(--surface-muted));
-
   --color-brand: hsl(var(--brand));
   --color-brand-dark: hsl(var(--brand-dark));
   --color-brand-light: hsl(var(--brand-light));
   --color-teal: hsl(var(--teal));
-  --color-accent: hsl(var(--accent));
-
+  --color-green: hsl(var(--green));
   --color-text-header: hsl(var(--text-header));
   --color-text-body: hsl(var(--text-body));
   --color-text-muted: hsl(var(--text-muted));
   --color-on-brand: hsl(var(--text-on-brand));
 
+  /* shadcn/ui tokens */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
   --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Arial, sans-serif;
 
-  --radius-xl: var(--radius);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
 @layer base {
   * {
-    border-color: hsl(var(--border));
+    @apply border-border outline-ring/50;
   }
 
   body {
@@ -71,7 +118,7 @@
     text-rendering: optimizeLegibility;
   }
 
-  /* Soft layered gradient backdrop — the calm, premium feel without darkness */
+  /* Soft layered gradient backdrop — calm, premium feel without darkness */
   body::before {
     content: "";
     position: fixed;
@@ -126,7 +173,7 @@
       100deg,
       hsl(var(--brand)) 0%,
       hsl(var(--teal)) 55%,
-      hsl(var(--accent)) 100%
+      hsl(var(--green)) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;

@@ -43,11 +43,11 @@ export default function SiteFooter() {
           <div className="text-sm">
             <p className="font-semibold text-white">Quick links</p>
             <ul className="mt-2.5 space-y-2">
-              <li><a href="#services" className="hover:text-white">Services</a></li>
-              <li><a href="#about" className="hover:text-white">What We Offer</a></li>
-              <li><a href="#team" className="hover:text-white">Our Team</a></li>
-              <li><a href="#hours" className="hover:text-white">Hours</a></li>
-              <li><a href="#contact" className="hover:text-white">Contact</a></li>
+              <li><a href="/transfer" className="hover:text-white">Switch / Transfer</a></li>
+              <li><a href="/#how" className="hover:text-white">How It Works</a></li>
+              <li><a href="/#services" className="hover:text-white">Services</a></li>
+              <li><a href="/faq" className="hover:text-white">FAQ</a></li>
+              <li><a href="/#contact" className="hover:text-white">Contact</a></li>
             </ul>
           </div>
         </div>

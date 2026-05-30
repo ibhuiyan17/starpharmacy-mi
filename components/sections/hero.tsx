@@ -1,15 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Phone, ArrowRight, Truck, ShieldCheck, Clock } from "lucide-react";
+import { Truck, RefreshCw, Users, ArrowRight, LogIn } from "lucide-react";
 import { site } from "@/lib/site";
 import { useOpenStatus } from "@/lib/hours";
 
-const BADGES = [
-  { icon: Truck, label: "Free daily delivery" },
-  { icon: ShieldCheck, label: "Most insurance accepted" },
-  { icon: Clock, label: "Ready in 10–15 min" },
+const PROMISES = [
+  { icon: Truck, label: "Free same-day delivery" },
+  { icon: RefreshCw, label: "Automated monthly refills" },
+  { icon: Users, label: "Manage family prescriptions" },
 ];
 
 export default function Hero() {
@@ -34,7 +35,7 @@ export default function Hero() {
                   }`}
                 />
               )}
-              {status ? status.message : "Warren, Michigan"}
+              Trusted local pharmacy · Warren, MI
             </motion.div>
 
             <motion.h1
@@ -43,9 +44,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.05 }}
               className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05]"
             >
-              Your friendly{" "}
-              <span className="text-gradient">neighborhood pharmacy</span> in
-              Warren, MI
+              Tired of waiting in line at{" "}
+              <span className="text-gradient">CVS and Walgreens?</span>
             </motion.h1>
 
             <motion.p
@@ -54,9 +54,10 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.12 }}
               className="mt-5 max-w-xl text-lg text-text-body"
             >
-              We go beyond filling prescriptions. Free delivery, easy transfers,
-              one-on-one consultations, and personalized care that puts you in
-              control of your health.
+              Get your prescriptions delivered straight to your doorstep —{" "}
+              <strong className="text-text-header">100% free</strong> — by our
+              trusted local team. Same-day delivery, automatic monthly refills,
+              and easy family account management.
             </motion.p>
 
             <motion.div
@@ -65,11 +66,16 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.18 }}
               className="mt-8 flex flex-wrap gap-3"
             >
-              <a href="#contact" className="btn-brand">
-                Transfer / Contact Us <ArrowRight className="h-4 w-4" />
-              </a>
-              <a href={`tel:${site.phone}`} className="btn-ghost">
-                <Phone className="h-4 w-4" /> {site.phone}
+              <Link href="/transfer" className="btn-brand">
+                Switch in 60 Seconds <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a
+                href={site.rx365PortalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
+                <LogIn className="h-4 w-4" /> Refill Online
               </a>
             </motion.div>
 
@@ -79,13 +85,13 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.28 }}
               className="mt-8 flex flex-wrap gap-x-6 gap-y-3"
             >
-              {BADGES.map((b) => (
+              {PROMISES.map((p) => (
                 <li
-                  key={b.label}
+                  key={p.label}
                   className="inline-flex items-center gap-2 text-sm font-medium text-text-body"
                 >
-                  <b.icon className="h-4 w-4 text-brand" />
-                  {b.label}
+                  <p.icon className="h-4 w-4 text-brand" />
+                  {p.label}
                 </li>
               ))}
             </motion.ul>
@@ -108,10 +114,9 @@ export default function Hero() {
                 className="h-[300px] w-full rounded-2xl object-cover sm:h-[420px]"
               />
             </div>
-            {/* Floating stat card */}
             <div className="glass-card absolute -bottom-5 -left-3 hidden rounded-2xl px-5 py-4 sm:block">
-              <p className="text-2xl font-extrabold text-gradient">12+ yrs</p>
-              <p className="text-xs text-text-muted">trusted pharmacist care</p>
+              <p className="text-2xl font-extrabold text-gradient">100% Free</p>
+              <p className="text-xs text-text-muted">same-day local delivery</p>
             </div>
           </motion.div>
         </div>

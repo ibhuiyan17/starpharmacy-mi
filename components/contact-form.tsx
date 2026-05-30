@@ -55,7 +55,7 @@ export default function ContactForm() {
   if (state === "sent") {
     return (
       <div className="surface-card flex flex-col items-center rounded-2xl p-8 text-center">
-        <CheckCircle2 className="h-12 w-12 text-accent" />
+        <CheckCircle2 className="h-12 w-12 text-green" />
         <h3 className="mt-3 text-xl font-bold text-text-header">Thank you!</h3>
         <p className="mt-1.5 text-text-body">
           Your message is on its way. We&apos;ll get back to you shortly.
