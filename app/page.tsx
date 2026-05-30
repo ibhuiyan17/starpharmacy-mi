@@ -7,6 +7,7 @@ import HowItWorks from "@/components/sections/how-it-works";
 import DeliveryChecker from "@/components/sections/delivery-checker";
 import AreasServed from "@/components/sections/areas-served";
 import Services from "@/components/sections/services";
+import Reviews from "@/components/sections/reviews";
 import About from "@/components/sections/about";
 import Team from "@/components/sections/team";
 import Contact from "@/components/sections/contact";
@@ -23,6 +24,7 @@ export default function HomePage() {
       <DeliveryChecker />
       <AreasServed />
       <Services />
+      <Reviews />
       <About />
       <Team />
       <div id="hours" className="scroll-mt-24" />

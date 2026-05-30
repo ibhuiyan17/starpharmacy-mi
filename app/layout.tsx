@@ -92,6 +92,17 @@ const jsonLd = {
     })),
   },
   sameAs: [site.facebook],
+  // Only emit a rating snippet once a real review count is configured.
+  ...(site.rating.count > 0
+    ? {
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: site.rating.value,
+          reviewCount: site.rating.count,
+          bestRating: 5,
+        },
+      }
+    : {}),
   openingHoursSpecification: site.hours
     .filter((h) => h.open !== null)
     .map((h) => ({

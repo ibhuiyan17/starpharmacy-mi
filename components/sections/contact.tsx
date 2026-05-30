@@ -98,15 +98,13 @@ export default function Contact() {
         {/* Map */}
         <Reveal delay={0.1} className="mt-6">
           <div className="surface-card overflow-hidden rounded-2xl p-2">
-            {process.env.NEXT_PUBLIC_DISABLE_MAP !== "1" && (
-              <iframe
-                title="Star Pharmacy location"
-                src={site.address.embedUrl}
-                className="h-[360px] w-full rounded-xl"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            )}
+            <iframe
+              title="Star Pharmacy location"
+              src={site.address.embedUrl}
+              className="h-[360px] w-full rounded-xl"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </Reveal>
       </div>

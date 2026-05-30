@@ -113,6 +113,34 @@ export const site = {
     },
   ],
 
+  // ---- Reviews / testimonials ----
+  // ⚠️ REPLACE the examples below with REAL reviews before launch, and set
+  // `rating.count` to your true total review count. The star-rating snippet
+  // in search results only appears once count > 0 — never publish an invented
+  // rating/count (it violates Google's guidelines and risks a penalty).
+  reviewsUrl: "https://www.google.com/maps?q=24831+Ryan+Rd,+Warren,+MI+48091", // TODO: link to the real Google reviews page
+  rating: { value: 5.0, count: 0, source: "Google" }, // count: 0 → no schema yet
+  reviews: [
+    {
+      name: "Example Review — replace me",
+      location: "Warren, MI",
+      rating: 5,
+      text: "They transferred everything from my old pharmacy and now my meds show up at my door every month. I haven't waited in a line since.",
+    },
+    {
+      name: "Example Review — replace me",
+      location: "Sterling Heights, MI",
+      rating: 5,
+      text: "The team called my old pharmacy, set up my refills, and delivered the same day. Friendly, fast, and free — couldn't ask for more.",
+    },
+    {
+      name: "Example Review — replace me",
+      location: "Roseville, MI",
+      rating: 5,
+      text: "I'm not into apps, so I just call or stop in. They always have my prescriptions ready and remember me by name.",
+    },
+  ],
+
   // Hours in 24h. open/close are local hours; null = closed all day.
   hours: [
     { day: "Sunday", open: null, close: null, label: "Closed" },
