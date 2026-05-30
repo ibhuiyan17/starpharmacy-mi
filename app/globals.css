@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+/* =====================================================================
+   STAR PHARMACY — Design System
+   Clean, light, trustworthy healthcare palette.
+   Borrows the polish of the Precision Funding site (glass cards, soft
+   gradients, smooth motion, modern type) in a calm medical palette.
+   ===================================================================== */
+
+:root {
+  /* Surfaces */
+  --bg-page: 204 60% 98%;          /* soft cool white */
+  --bg-page-2: 200 55% 95%;        /* faint blue tint for gradients */
+  --surface: 0 0% 100%;            /* card white */
+  --surface-muted: 204 40% 97%;
+
+  /* Brand — calming medical blue → teal */
+  --brand: 201 96% 38%;            /* primary blue  #0a82c4-ish */
+  --brand-dark: 209 80% 28%;
+  --brand-light: 199 95% 50%;
+  --teal: 184 78% 40%;             /* teal accent */
+  --accent: 158 72% 40%;           /* health green  */
+
+  /* Text */
+  --text-header: 213 40% 16%;      /* slate-900 */
+  --text-body: 213 18% 34%;        /* slate-600 */
+  --text-muted: 213 14% 50%;
+  --text-on-brand: 0 0% 100%;
+
+  /* Lines / rings */
+  --border: 210 24% 90%;
+  --ring: 201 96% 45%;
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-bg-page: hsl(var(--bg-page));
+  --color-bg-page-2: hsl(var(--bg-page-2));
+  --color-surface: hsl(var(--surface));
+  --color-surface-muted: hsl(var(--surface-muted));
+
+  --color-brand: hsl(var(--brand));
+  --color-brand-dark: hsl(var(--brand-dark));
+  --color-brand-light: hsl(var(--brand-light));
+  --color-teal: hsl(var(--teal));
+  --color-accent: hsl(var(--accent));
+
+  --color-text-header: hsl(var(--text-header));
+  --color-text-body: hsl(var(--text-body));
+  --color-text-muted: hsl(var(--text-muted));
+  --color-on-brand: hsl(var(--text-on-brand));
+
+  --color-border: hsl(var(--border));
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Arial, sans-serif;
+
+  --radius-xl: var(--radius);
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--bg-page));
+    color: hsl(var(--text-body));
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Soft layered gradient backdrop — the calm, premium feel without darkness */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    background:
+      radial-gradient(60rem 40rem at 85% -10%, hsla(201, 96%, 60%, 0.16), transparent 60%),
+      radial-gradient(50rem 40rem at -10% 10%, hsla(184, 78%, 55%, 0.14), transparent 55%),
+      radial-gradient(45rem 35rem at 50% 110%, hsla(158, 72%, 55%, 0.12), transparent 60%);
+    background-color: hsl(var(--bg-page));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--text-header));
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  ::selection {
+    background: hsl(var(--brand) / 0.18);
+  }
+}
+
+@layer components {
+  /* Frosted card — the light-mode answer to PF's glass-effect */
+  .glass-card {
+    background: hsl(0 0% 100% / 0.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid hsl(0 0% 100% / 0.8);
+    box-shadow:
+      0 1px 2px hsl(213 30% 20% / 0.04),
+      0 12px 32px -12px hsl(209 60% 35% / 0.18);
+  }
+
+  .surface-card {
+    background: hsl(var(--surface));
+    border: 1px solid hsl(var(--border));
+    box-shadow:
+      0 1px 2px hsl(213 30% 20% / 0.04),
+      0 16px 40px -24px hsl(209 60% 35% / 0.25);
+  }
+
+  /* Brand gradient text */
+  .text-gradient {
+    background: linear-gradient(
+      100deg,
+      hsl(var(--brand)) 0%,
+      hsl(var(--teal)) 55%,
+      hsl(var(--accent)) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Primary pill button */
+  .btn-brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.85rem 1.6rem;
+    font-weight: 600;
+    color: hsl(var(--text-on-brand));
+    background: linear-gradient(100deg, hsl(var(--brand)), hsl(var(--teal)));
+    box-shadow: 0 10px 24px -8px hsl(var(--brand) / 0.6);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  }
+  .btn-brand:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px -8px hsl(var(--brand) / 0.65);
+    filter: brightness(1.04);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.85rem 1.6rem;
+    font-weight: 600;
+    color: hsl(var(--brand-dark));
+    background: hsl(0 0% 100% / 0.7);
+    border: 1px solid hsl(var(--border));
+    transition: transform 0.18s ease, background 0.18s ease;
+  }
+  .btn-ghost:hover {
+    transform: translateY(-2px);
+    background: hsl(0 0% 100%);
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
