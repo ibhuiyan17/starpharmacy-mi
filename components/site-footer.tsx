@@ -46,6 +46,7 @@ export default function SiteFooter() {
               <li><a href="/transfer" className="hover:text-white">Switch / Transfer</a></li>
               <li><a href="/#how" className="hover:text-white">How It Works</a></li>
               <li><a href="/#services" className="hover:text-white">Services</a></li>
+              <li><a href="/#areas" className="hover:text-white">Areas We Serve</a></li>
               <li><a href="/faq" className="hover:text-white">FAQ</a></li>
               <li><a href="/#contact" className="hover:text-white">Contact</a></li>
             </ul>

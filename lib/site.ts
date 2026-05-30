@@ -1,6 +1,38 @@
 // Central place for all Star Pharmacy info.
 // Edit phone numbers, hours, address, etc. here — every section reads from this.
 
+// ---- Service area (Warren + every surrounding city/ZIP) ----
+// Drives the delivery-zone checker, the "Areas We Serve" section, local-SEO
+// metadata, the sitemap, and the Pharmacy structured data. Add or remove
+// cities/ZIPs here and the whole site updates.
+export const serviceAreas = [
+  { city: "Warren", county: "Macomb", zips: ["48088", "48089", "48091", "48092", "48093"] },
+  { city: "Center Line", county: "Macomb", zips: ["48015"] },
+  { city: "Sterling Heights", county: "Macomb", zips: ["48310", "48311", "48312", "48313", "48314"] },
+  { city: "Roseville", county: "Macomb", zips: ["48066"] },
+  { city: "Eastpointe", county: "Macomb", zips: ["48021"] },
+  { city: "Fraser", county: "Macomb", zips: ["48026"] },
+  { city: "Clinton Township", county: "Macomb", zips: ["48035", "48036", "48038"] },
+  { city: "St. Clair Shores", county: "Macomb", zips: ["48080", "48081", "48082"] },
+  { city: "Utica", county: "Macomb", zips: ["48315", "48316", "48317"] },
+  { city: "Mount Clemens", county: "Macomb", zips: ["48043"] },
+  { city: "Madison Heights", county: "Oakland", zips: ["48071"] },
+  { city: "Hazel Park", county: "Oakland", zips: ["48030"] },
+  { city: "Royal Oak", county: "Oakland", zips: ["48067", "48073"] },
+  { city: "Ferndale", county: "Oakland", zips: ["48220"] },
+  { city: "Clawson", county: "Oakland", zips: ["48017"] },
+  { city: "Berkley", county: "Oakland", zips: ["48072"] },
+  { city: "Oak Park", county: "Oakland", zips: ["48237"] },
+  { city: "Troy", county: "Oakland", zips: ["48083", "48084", "48085", "48098"] },
+  { city: "Hamtramck", county: "Wayne", zips: ["48212"] },
+  { city: "Highland Park", county: "Wayne", zips: ["48203"] },
+  { city: "Harper Woods", county: "Wayne", zips: ["48225"] },
+  { city: "Detroit (Northeast)", county: "Wayne", zips: ["48205", "48224", "48234", "48213", "48211"] },
+] as const;
+
+// Flat list of every served ZIP (used by the delivery-zone checker).
+export const deliveryZips: string[] = serviceAreas.flatMap((a) => [...a.zips]);
+
 export const site = {
   name: "Star Pharmacy",
   tagline: "Your Convenient Neighborhood Pharmacy",
@@ -31,14 +63,9 @@ export const site = {
   rx365PortalUrl: "https://starpharmacy.rx365.com", // PLACEHOLDER — confirm before launch
   rx365PortalConfigured: false, // flip to true once the URL above is verified
 
-  // ---- Delivery zone (ZIP codes the pharmacy delivers to, free) ----
-  // Warren, MI and surrounding communities. Edit as the radius grows.
-  deliveryZips: [
-    "48088", "48089", "48091", "48092", "48093", // Warren
-    "48066", "48312", "48310", "48313",           // Roseville / Sterling Heights
-    "48021", "48015", "48030",                    // Eastpointe / Center Line / Hazel Park
-    "48071", "48205", "48021",                    // Madison Heights / Detroit edge
-  ] as string[],
+  // ---- Delivery / service area ---- (defined in serviceAreas above)
+  serviceAreas,
+  deliveryZips,
 
   // ---- FAQ ----
   faqs: [
@@ -81,3 +108,8 @@ export const site = {
 };
 
 export type Hours = (typeof site.hours)[number];
+
+// Plain list of served city names (for SEO copy, keywords, structured data).
+export const serviceCities = serviceAreas.map((a) =>
+  a.city.replace(/\s*\(.*\)$/, "")
+);

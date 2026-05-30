@@ -3,6 +3,7 @@ import TrustStrip from "@/components/sections/trust-strip";
 import PatientPaths from "@/components/sections/patient-paths";
 import HowItWorks from "@/components/sections/how-it-works";
 import DeliveryChecker from "@/components/sections/delivery-checker";
+import AreasServed from "@/components/sections/areas-served";
 import Services from "@/components/sections/services";
 import About from "@/components/sections/about";
 import Team from "@/components/sections/team";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <PatientPaths />
       <HowItWorks />
       <DeliveryChecker />
+      <AreasServed />
       <Services />
       <About />
       <Team />

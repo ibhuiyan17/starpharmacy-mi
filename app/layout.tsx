@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { site } from "@/lib/site";
+import { site, serviceCities } from "@/lib/site";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import { cn } from "@/lib/utils";
@@ -21,12 +21,21 @@ export const metadata: Metadata = {
   description: site.description,
   keywords: [
     "Star Pharmacy",
-    "pharmacy Warren MI",
+    "pharmacy near me",
     "free prescription delivery",
+    "free prescription delivery near me",
+    "pharmacy that delivers",
+    "transfer prescription from CVS",
+    "transfer prescription from Walgreens",
+    "automatic prescription refills",
     "medication therapy management",
-    "prescription transfer",
-    "Warren Michigan pharmacy",
+    "MTM pharmacy",
     "halal vitamins",
+    "local pharmacy Macomb County",
+    "local pharmacy Oakland County",
+    // Per-city long-tail terms for local SEO
+    ...serviceCities.map((c) => `pharmacy in ${c} MI`),
+    ...serviceCities.map((c) => `prescription delivery ${c} MI`),
   ],
   openGraph: {
     title: `${site.name} | Pharmacy in Warren, MI`,
@@ -64,10 +73,24 @@ const jsonLd = {
     latitude: site.address.lat,
     longitude: site.address.lng,
   },
-  areaServed: site.deliveryZips.map((z) => ({
-    "@type": "PostalCodeArea",
-    postalCode: z,
+  areaServed: serviceCities.map((c) => ({
+    "@type": "City",
+    name: `${c}, MI`,
   })),
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Pharmacy Services",
+    itemListElement: [
+      "Free same-day prescription delivery",
+      "Prescription transfers",
+      "Automatic monthly refills (Med-Sync)",
+      "Medication therapy management",
+      "Pharmacist consultations",
+    ].map((s) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: s },
+    })),
+  },
   sameAs: [site.facebook],
   openingHoursSpecification: site.hours
     .filter((h) => h.open !== null)
