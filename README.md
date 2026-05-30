@@ -37,6 +37,14 @@ The contact form (`components/contact-form.tsx`) posts to `/api/contact`.
 - If they are **not** set, the form gracefully falls back to opening the
   visitor's email app pre-filled — so it always works.
 
+## Transfer automation
+
+The prescription-transfer funnel is built to become fully automated later
+**without a code rewrite** — you just add environment variables as the legal
+and technical pieces are ready (email → HIPAA webhook → certified RxQ bridge).
+See [docs/AUTOMATION.md](docs/AUTOMATION.md) for the roadmap and the HIPAA
+guardrails the build enforces.
+
 ## Deploying
 
 This is a server-rendered Next.js app, so the simplest host is **Vercel**
