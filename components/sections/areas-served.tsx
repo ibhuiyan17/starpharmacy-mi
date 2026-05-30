@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { MapPin, Truck } from "lucide-react";
-import { serviceAreas, site } from "@/lib/site";
+import { serviceAreaPages, site, type ServiceAreaPage } from "@/lib/site";
 import Reveal from "@/components/reveal";
 
-// Group the flat service-area list by county for a tidy, crawlable layout.
-const byCounty = serviceAreas.reduce<Record<string, typeof serviceAreas[number][]>>(
+// Group the service-area pages by county for a tidy, crawlable layout.
+const byCounty = serviceAreaPages.reduce<Record<string, ServiceAreaPage[]>>(
   (acc, a) => {
     (acc[a.county] ??= []).push(a);
     return acc;
@@ -40,8 +41,13 @@ export default function AreasServed() {
                 </h3>
                 <ul className="mt-4 space-y-2.5">
                   {areas.map((a) => (
-                    <li key={a.city}>
-                      <span className="font-medium text-text-header">{a.city}</span>
+                    <li key={a.slug}>
+                      <Link
+                        href={`/delivery/${a.slug}`}
+                        className="font-medium text-text-header hover:text-brand hover:underline"
+                      >
+                        {a.city}
+                      </Link>
                       <span className="text-sm text-text-muted">
                         {" "}
                         — {a.zips.join(", ")}

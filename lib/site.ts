@@ -63,6 +63,16 @@ export const site = {
   rx365PortalUrl: "https://starpharmacy.rx365.com", // PLACEHOLDER — confirm before launch
   rx365PortalConfigured: false, // flip to true once the URL above is verified
 
+  // ---- Explainer video (60-second video from the plan) ----
+  // Drop in a YouTube or Vimeo ID when the video is ready and it appears
+  // automatically. Leave both blank to show a polished "coming soon" slot.
+  explainerVideo: {
+    youtubeId: "", // e.g. "dQw4w9WgXcQ"
+    vimeoId: "", // e.g. "76979871"
+    title: "See how Star Pharmacy works",
+    poster: "/images/IMG_1522.jpg", // shown before the video loads (fast page)
+  },
+
   // ---- Delivery / service area ---- (defined in serviceAreas above)
   serviceAreas,
   deliveryZips,
@@ -113,3 +123,26 @@ export type Hours = (typeof site.hours)[number];
 export const serviceCities = serviceAreas.map((a) =>
   a.city.replace(/\s*\(.*\)$/, "")
 );
+
+// URL-safe slug for a city ("Sterling Heights" -> "sterling-heights",
+// "Detroit (Northeast)" -> "detroit").
+export function cityToSlug(city: string): string {
+  return city
+    .toLowerCase()
+    .replace(/\(.*?\)/g, "")
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+// Service areas with a clean display name + slug, for the per-city landing
+// pages and internal links.
+export const serviceAreaPages = serviceAreas.map((a) => ({
+  city: a.city.replace(/\s*\(.*\)$/, ""),
+  rawCity: a.city,
+  county: a.county,
+  zips: [...a.zips],
+  slug: cityToSlug(a.city),
+}));
+
+export type ServiceAreaPage = (typeof serviceAreaPages)[number];

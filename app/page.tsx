@@ -1,6 +1,7 @@
 import Hero from "@/components/sections/hero";
 import TrustStrip from "@/components/sections/trust-strip";
 import PatientPaths from "@/components/sections/patient-paths";
+import Explainer from "@/components/sections/explainer";
 import HowItWorks from "@/components/sections/how-it-works";
 import DeliveryChecker from "@/components/sections/delivery-checker";
 import AreasServed from "@/components/sections/areas-served";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Hero />
       <TrustStrip />
       <PatientPaths />
+      <Explainer />
       <HowItWorks />
       <DeliveryChecker />
       <AreasServed />
