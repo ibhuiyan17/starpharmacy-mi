@@ -37,7 +37,7 @@ export const site = {
   name: "Star Pharmacy",
   tagline: "Your Convenient Neighborhood Pharmacy",
   description:
-    "Star Pharmacy in Warren, Michigan — free delivery, easy prescription transfers, medication therapy management, and one-on-one pharmacist consultations. Most insurance accepted.",
+    "Star Pharmacy in Warren, Michigan — we transfer your prescriptions, call your old pharmacy, set up automatic refills, and deliver free to your door (or walk in and pick up). Medication therapy management and most insurance accepted.",
   url: "https://www.starpharmacy-mi.com",
 
   phone: "586-486-5037",
@@ -98,6 +98,14 @@ export const site = {
     {
       q: "Do you accept my insurance?",
       a: "We accept most insurance plans and will match or beat competitor prices. Call us at 586-486-5037 and we'll confirm your coverage in minutes.",
+    },
+    {
+      q: "Do I have to use delivery?",
+      a: "Not at all. Delivery is free if you want it, but you're always welcome to walk in and pick up your prescriptions at the counter — whatever's most convenient for you.",
+    },
+    {
+      q: "What exactly do you handle when I switch?",
+      a: "Everything. We transfer all your prescriptions, call your old pharmacy to pull your records, set up automatic monthly refills (Med-Sync), and deliver to your door for free — or have them ready for pickup. You just tell us your name and current pharmacy.",
     },
     {
       q: "I'm not tech-savvy. Can I still use you?",

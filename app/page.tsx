@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/hero";
+import FullServicePromise from "@/components/sections/full-service-promise";
 import TrustStrip from "@/components/sections/trust-strip";
 import PatientPaths from "@/components/sections/patient-paths";
 import Explainer from "@/components/sections/explainer";
@@ -14,6 +15,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <FullServicePromise />
       <TrustStrip />
       <PatientPaths />
       <Explainer />

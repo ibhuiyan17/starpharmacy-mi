@@ -14,8 +14,8 @@ const STEPS = [
   },
   {
     icon: Home,
-    title: "Free doorstep delivery",
-    body: "Our local driver drops your secure package right to your porch. Track the drop-off and pay safely online or over the phone.",
+    title: "Free delivery — or pick up",
+    body: "Our local driver drops your secure package right to your porch, free. Prefer the counter? Walk in and pick up whenever it suits you.",
   },
 ];
 

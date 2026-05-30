@@ -36,8 +36,9 @@ export default function TransferPage() {
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-lg text-text-body">
           Leaving CVS, Walgreens, or another pharmacy? Just fill this out. Our
-          team calls your old store, moves everything over, and delivers your
-          medications free — you never wait in line again.
+          team calls your old store, moves everything over, sets up your refills,
+          and delivers free — or has it ready for in-store pickup. You never wait
+          in line again.
         </p>
 
         <ul className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2">

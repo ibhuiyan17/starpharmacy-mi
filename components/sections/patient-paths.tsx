@@ -44,9 +44,9 @@ export default function PatientPaths() {
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-sm text-text-body">
-                <li>• Takes about 60 seconds</li>
-                <li>• No app to download</li>
-                <li>• We handle the old pharmacy for you</li>
+                <li>• We transfer everything &amp; call your old pharmacy</li>
+                <li>• We set up automatic refills (Med-Sync)</li>
+                <li>• Free delivery — or pick up in store</li>
               </ul>
             </CardContent>
             <CardFooter>

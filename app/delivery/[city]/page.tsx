@@ -110,11 +110,12 @@ export default async function CityPage({
             <span className="text-gradient">{area.city}, MI</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-text-body">
-            Skip the lines at CVS and Walgreens. Star Pharmacy brings your
-            prescriptions right to your door in {area.city} —{" "}
+            Skip the lines at CVS and Walgreens. Star Pharmacy transfers all your
+            prescriptions, calls your current pharmacy, sets up your refills, and
+            brings everything right to your door in {area.city} —{" "}
             <strong className="text-text-header">100% free</strong>, same-day, by
-            our own trusted local drivers. We&apos;ll even call your current
-            pharmacy and move everything over for you.
+            our own trusted local drivers. Prefer the counter? You&apos;re always
+            welcome to walk in and pick up instead.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">

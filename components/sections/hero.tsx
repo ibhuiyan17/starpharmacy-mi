@@ -3,14 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Truck, RefreshCw, Users, ArrowRight, LogIn } from "lucide-react";
+import { Truck, RefreshCw, ArrowRightLeft, ArrowRight, LogIn, Store } from "lucide-react";
 import { site } from "@/lib/site";
 import { useOpenStatus } from "@/lib/hours";
 
 const PROMISES = [
-  { icon: Truck, label: "Free same-day delivery" },
-  { icon: RefreshCw, label: "Automated monthly refills" },
-  { icon: Users, label: "Manage family prescriptions" },
+  { icon: ArrowRightLeft, label: "Free prescription transfers" },
+  { icon: Truck, label: "Free delivery" },
+  { icon: RefreshCw, label: "Automatic refills (Med-Sync)" },
+  { icon: Store, label: "Walk-in welcome" },
 ];
 
 export default function Hero() {
@@ -54,10 +55,10 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.12 }}
               className="mt-5 max-w-xl text-lg text-text-body"
             >
-              Get your prescriptions delivered straight to your doorstep —{" "}
-              <strong className="text-text-header">100% free</strong> — by our
-              trusted local team. Same-day delivery, automatic monthly refills,
-              and easy family account management.
+              We&apos;ll transfer all your prescriptions, call your old pharmacy,
+              set up your refills, and deliver to your door —{" "}
+              <strong className="text-text-header">100% free</strong>. Prefer the
+              counter? You&apos;re always welcome to walk in.
             </motion.p>
 
             <motion.div
