@@ -2,14 +2,20 @@ import { Star } from "lucide-react";
 import { site } from "@/lib/site";
 import Reveal from "@/components/reveal";
 
-function Stars({ rating }: { rating: number }) {
+function Stars({
+  rating,
+  size = "h-4 w-4",
+}: {
+  rating: number;
+  size?: string;
+}) {
   return (
-    <div className="flex gap-0.5" aria-label={`${rating} out of 5 stars`}>
+    <div className="flex gap-1" aria-label={`${rating} out of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
-          className={`h-4 w-4 ${
-            i < rating ? "fill-amber-400 text-amber-400" : "text-border"
+          className={`${size} ${
+            i < rating ? "fill-amber-400 text-amber-400" : "fill-border text-border"
           }`}
         />
       ))}
@@ -51,7 +57,12 @@ export default function Reviews() {
         {reviews.map((r, i) => (
           <Reveal key={i} delay={i * 0.08}>
             <figure className="surface-card flex h-full flex-col rounded-2xl p-7">
-              <Stars rating={r.rating} />
+              <div className="flex items-center gap-2">
+                <Stars rating={r.rating} size="h-5 w-5" />
+                <span className="text-sm font-bold text-amber-500">
+                  {r.rating.toFixed(1)}
+                </span>
+              </div>
               <blockquote className="mt-4 flex-grow text-text-body">
                 “{r.text}”
               </blockquote>
