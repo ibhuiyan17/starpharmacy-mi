@@ -118,13 +118,13 @@ export const site = {
   // moment, update it to the TRUE total Google shows next to your rating (and
   // bump `value` if the official average isn't exactly 5.0) — keep it accurate.
   reviewsUrl: "https://www.google.com/search?q=Star+Pharmacy+Warren+MI+Reviews",
-  rating: { value: 5.0, count: 6, source: "Google" },
+  rating: { value: 4.7, count: 47, source: "Google" },
   reviews: [
     {
       name: "Mark Licatovich",
       meta: "Google · 4 reviews",
       rating: 5,
-      text: "Absolutely, hands down the best pharmacy that I have ever dealt with. They are very pleasant to work with and always go the extra mile to help you out. I have a Rite Aid, 2 CVS's and a Walgreens all within 8 miles of my home…",
+      text: "They are absolutely hands down the best pharmacy that I have ever dealt with. They are very pleasant to work with and they always go the extra mile to help you out. I have a Rite Aid, 2 CVS's and a Walgreens all within 8 miles of my home, but because of the great customer service I get from Star Pharmacy, me and everyone in my family choose to drive 18 miles each way to use Star Pharmacy!",
     },
     {
       name: "Heena Uddin",
