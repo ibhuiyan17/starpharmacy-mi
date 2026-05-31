@@ -6,7 +6,7 @@ const TEAM = [
     img: "/images/IMG_1566.JPG",
     name: "Shah Alam Bhuiyan, RPh, PhD",
     role: "Pharmacist in Charge",
-    bio: "12+ years of experience as a pharmacist, including 10 years at CVS. Shah ensures each patient receives the personal care they deserve. Alongside his Pharmacy degree, he earned a PhD in Molecular Pharmacy and Genetics in Japan and held post-doctoral research positions in Japan and the USA. He spent 10+ years as an Associate Professor at a Pharmacy School and has published 45+ peer-reviewed scientific articles.",
+    bio: "17+ years of experience as a pharmacist, including 10 years at CVS. Shah ensures each patient receives the personal care they deserve. Alongside his Pharmacy degree, he earned a PhD in Molecular Pharmacy and Genetics in Japan and held post-doctoral research positions in Japan and the USA. He spent 10+ years as an Associate Professor at a Pharmacy School and has published 45+ peer-reviewed scientific articles.",
   },
   {
     img: "/images/IMG_1569.JPG",

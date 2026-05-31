@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { HeartPulse, BadgePercent, PackageOpen } from "lucide-react";
+import { HeartPulse, BadgePercent, FlaskConical, PackageOpen } from "lucide-react";
 import Reveal from "@/components/reveal";
 
 const OFFERS = [
@@ -9,9 +9,14 @@ const OFFERS = [
     body: "We're certified to provide distinct medication therapy management for patients with hypertension, high cholesterol, asthma, diabetes, congestive heart failure (CHF), and allergies — ensuring the best therapeutic outcomes.",
   },
   {
+    icon: FlaskConical,
+    title: "Custom Compounding",
+    body: "We compound custom medications right here — mixing and preparing prescriptions to your doctor's exact specifications when a standard, off-the-shelf option isn't the right fit (special doses, forms, or flavors).",
+  },
+  {
     icon: BadgePercent,
     title: "Deals & Offers",
-    body: "Competitive community prices — we'll match and beat any competitor price. New or transferred prescriptions are eligible for special offers, and we provide free health screenings.",
+    body: "Competitive community prices — we'll match and beat any competitor price. New or transferred prescriptions are eligible for special offers, and we provide flu shots, immunizations, and free health screenings.",
   },
   {
     icon: PackageOpen,

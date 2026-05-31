@@ -16,6 +16,7 @@ const SERVICES = [
     icon: FileText,
     title: "Key Services",
     list: [
+      "Flu shots & immunizations",
       "We accept most insurance plans",
       "Easy prescription transfers",
       "Refill reminders for your medication",

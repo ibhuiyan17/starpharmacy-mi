@@ -1,7 +1,7 @@
 import { Users, Truck, Star, ClipboardCheck } from "lucide-react";
 
 const STATS = [
-  { icon: Star, value: "12+ years", label: "Pharmacist experience" },
+  { icon: Star, value: "17+ years", label: "Pharmacist experience" },
   { icon: Truck, value: "Free", label: "Daily prescription delivery" },
   { icon: ClipboardCheck, value: "10–15 min", label: "Typical prescription wait" },
   { icon: Users, value: "MTM", label: "Certified therapy management" },
