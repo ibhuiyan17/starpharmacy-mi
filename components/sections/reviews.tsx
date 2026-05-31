@@ -55,9 +55,12 @@ export default function Reviews() {
               <blockquote className="mt-4 flex-grow text-text-body">
                 “{r.text}”
               </blockquote>
-              <figcaption className="mt-5 border-t border-border pt-4">
-                <span className="font-bold text-text-header">{r.name}</span>
-                <span className="block text-sm text-text-muted">{r.location}</span>
+              <figcaption className="mt-5 flex items-center justify-between border-t border-border pt-4">
+                <div>
+                  <span className="font-bold text-text-header">{r.name}</span>
+                  <span className="block text-sm text-text-muted">{r.meta}</span>
+                </div>
+                <span className="text-xs font-medium text-text-muted">via Google</span>
               </figcaption>
             </figure>
           </Reveal>

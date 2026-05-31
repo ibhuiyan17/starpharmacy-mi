@@ -101,6 +101,16 @@ const jsonLd = {
           reviewCount: site.rating.count,
           bestRating: 5,
         },
+        review: site.reviews.map((r) => ({
+          "@type": "Review",
+          author: { "@type": "Person", name: r.name },
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: r.rating,
+            bestRating: 5,
+          },
+          reviewBody: r.text,
+        })),
       }
     : {}),
   openingHoursSpecification: site.hours

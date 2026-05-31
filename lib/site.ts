@@ -113,31 +113,48 @@ export const site = {
     },
   ],
 
-  // ---- Reviews / testimonials ----
-  // ⚠️ REPLACE the examples below with REAL reviews before launch, and set
-  // `rating.count` to your true total review count. The star-rating snippet
-  // in search results only appears once count > 0 — never publish an invented
-  // rating/count (it violates Google's guidelines and risks a penalty).
-  reviewsUrl: "https://www.google.com/maps?q=24831+Ryan+Rd,+Warren,+MI+48091", // TODO: link to the real Google reviews page
-  rating: { value: 5.0, count: 0, source: "Google" }, // count: 0 → no schema yet
+  // ---- Reviews / testimonials (real Google reviews) ----
+  // `rating.count` is set to the number of reviews shown here. When you have a
+  // moment, update it to the TRUE total Google shows next to your rating (and
+  // bump `value` if the official average isn't exactly 5.0) — keep it accurate.
+  reviewsUrl: "https://www.google.com/search?q=Star+Pharmacy+Warren+MI+Reviews",
+  rating: { value: 5.0, count: 6, source: "Google" },
   reviews: [
     {
-      name: "Example Review — replace me",
-      location: "Warren, MI",
+      name: "Mark Licatovich",
+      meta: "Google · 4 reviews",
       rating: 5,
-      text: "They transferred everything from my old pharmacy and now my meds show up at my door every month. I haven't waited in a line since.",
+      text: "Absolutely, hands down the best pharmacy that I have ever dealt with. They are very pleasant to work with and always go the extra mile to help you out. I have a Rite Aid, 2 CVS's and a Walgreens all within 8 miles of my home…",
     },
     {
-      name: "Example Review — replace me",
-      location: "Sterling Heights, MI",
+      name: "Heena Uddin",
+      meta: "Local Guide · 27 reviews",
       rating: 5,
-      text: "The team called my old pharmacy, set up my refills, and delivered the same day. Friendly, fast, and free — couldn't ask for more.",
+      text: "This place has the best customer service and is run by such kind people. Sometimes when my medications are called in, the owners drop it off to my home without being asked to. They're very friendly and make sure you get your medications in a timely manner.",
     },
     {
-      name: "Example Review — replace me",
-      location: "Roseville, MI",
+      name: "Hasna Begum",
+      meta: "Local Guide · 47 reviews",
       rating: 5,
-      text: "I'm not into apps, so I just call or stop in. They always have my prescriptions ready and remember me by name.",
+      text: "Amazing pharmacy and they deliver! They always answer the phone and explain everything in Bengali too!",
+    },
+    {
+      name: "Jhillur Uddin",
+      meta: "Local Guide · 27 reviews",
+      rating: 5,
+      text: "Very good service. Good people — they always help me and my family and take care of everything that we need. They always go the extra mile to help their customers. We're very satisfied and really appreciate their service.",
+    },
+    {
+      name: "FrannyJ Jones",
+      meta: "Google · 14 reviews",
+      rating: 5,
+      text: "I have never been to a pharmacy in my life that has been more compassionate about their customers. I am so grateful to have stumbled upon this establishment. Medications are available in a timely manner.",
+    },
+    {
+      name: "Jeanie Anton",
+      meta: "Google · 2 reviews",
+      rating: 5,
+      text: "The best pharmacy ever. I have been coming here pretty close to when they opened. They always have my medication and make sure regular customers' medicine is there for them.",
     },
   ],
 
