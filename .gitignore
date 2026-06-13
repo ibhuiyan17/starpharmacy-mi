@@ -1,4 +1,12 @@
 *bak
 *.DS_Store
 *debug.log
+# Next.js / Node
+/node_modules
+/.next/
+/out/
+/build
+.env*.local
+*.tsbuildinfo
+next-env.d.ts
 .vercel
